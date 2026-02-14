@@ -15,6 +15,14 @@
         .border-kumir-gold { border-color: #e99949; }
         .bg-kumir-gold { background-color: #ec9034; }
 
+        /* Efek Latar Belakang agar tidak kosong */
+        .hero-gradient {
+            background: radial-gradient(circle at 20% 30%, rgba(236, 144, 52, 0.15) 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, rgba(236, 144, 52, 0.1) 0%, transparent 40%),
+                        #030806;
+        }
+
+        /* Efek Melayang untuk Gambar Hero */
         @keyframes floating {
             0% { transform: translateY(0px) scale(1.1); }
             50% { transform: translateY(-15px) scale(1.12); }
@@ -70,7 +78,9 @@
     </div>
 </nav>
 
-<header class="bg-kumir-dark min-h-[85vh] md:min-h-[90vh] flex items-center overflow-hidden relative">
+<header class="hero-gradient min-h-[85vh] md:min-h-[90vh] flex items-center overflow-hidden relative">
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
+    
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 w-full relative z-10">
         <div class="flex flex-row items-center justify-between gap-4 md:gap-12">
             
