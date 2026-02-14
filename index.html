@@ -15,7 +15,6 @@
         .border-kumir-gold { border-color: #e99949; }
         .bg-kumir-gold { background-color: #ec9034; }
 
-        /* Background agar tidak kosong */
         .hero-gradient {
             background: radial-gradient(circle at 20% 30%, rgba(236, 144, 52, 0.15) 0%, transparent 40%),
                         radial-gradient(circle at 80% 70%, rgba(236, 144, 52, 0.1) 0%, transparent 40%),
@@ -23,7 +22,6 @@
             position: relative;
         }
 
-        /* Animasi Mobil */
         @keyframes floating {
             0% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
@@ -33,11 +31,11 @@
             animation: floating 3s ease-in-out infinite;
         }
 
-        /* Perbaikan khusus layar kecil agar gambar & teks tidak tabrakan */
-        @media (max-width: 480px) {
-            .hero-title { font-size: 1.4rem !important; line-height: 1.2; }
-            .info-box { padding: 0.5rem !important; }
-            .info-text { font-size: 7px !important; }
+        /* Perbaikan jarak dan teks khusus HP */
+        @media (max-width: 640px) {
+            .hero-section { min-height: 50vh !important; padding-top: 2rem; padding-bottom: 2rem; }
+            .hero-title { font-size: 1.5rem !important; }
+            .info-text { font-size: 8px !important; }
         }
     </style>
 </head>
@@ -82,39 +80,37 @@
     </div>
 </nav>
 
-<header class="hero-gradient min-h-[60vh] md:min-h-[90vh] flex items-center overflow-hidden">
+<header class="hero-section hero-gradient min-h-[50vh] md:min-h-[90vh] flex items-center overflow-hidden">
     <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
 
     <div class="max-w-7xl mx-auto px-4 md:px-6 py-6 w-full relative z-10">
-        <div class="flex flex-row items-center justify-between gap-2 md:gap-12">
+        <div class="flex flex-row items-center justify-between gap-4">
             
-            <div class="w-1/2 md:w-1/2 text-white" data-aos="fade-right">
+            <div class="w-[55%] md:w-1/2 text-white" data-aos="fade-right">
                 <h2 class="text-kumir-gold font-bold tracking-widest mb-1 text-[8px] md:text-sm uppercase">Tour & Travel</h2>
                 <h1 class="hero-title text-2xl md:text-6xl lg:text-7xl font-black uppercase mb-3">
                     KUMIR <br><span class="text-kumir-gold">TRANS</span>
                 </h1>
                 
-                <div class="info-box grid grid-cols-1 gap-2 p-2 md:p-6 border border-white/10 rounded-lg bg-white/5 backdrop-blur-md">
-                    <div>
-                        <h3 class="text-kumir-gold font-bold uppercase text-[7px] md:text-xs tracking-tighter md:tracking-widest">Rute Utama:</h3>
-                        <ul class="info-text space-y-0.5 text-[8px] md:text-sm text-gray-200">
-                            <li>Semarang - Jkt PP</li>
-                            <li>Jogja - Jkt PP</li>
-                        </ul>
-                    </div>
+                <div class="p-2 md:p-6 border border-white/10 rounded-lg bg-white/5 backdrop-blur-md">
+                    <h3 class="text-kumir-gold font-bold uppercase text-[7px] md:text-xs mb-1">Rute Utama:</h3>
+                    <ul class="info-text space-y-0.5 text-[9px] md:text-sm text-gray-200">
+                        <li>Semarang - Jkt PP</li>
+                        <li>Jogja - Jkt PP</li>
+                    </ul>
                 </div>
 
                 <div class="mt-4">
-                    <a href="https://wa.me/6289502191519" class="inline-block bg-kumir-gold text-black px-3 md:px-10 py-2 md:py-4 rounded-full font-black uppercase text-[9px] md:text-sm hover:bg-white transition">
-                        Hubungi Admin
+                    <a href="https://wa.me/6289502191519" class="inline-block bg-kumir-gold text-black px-4 py-2 md:px-10 md:py-4 rounded-full font-black uppercase text-[9px] md:text-sm hover:bg-white transition shadow-lg">
+                        Pesan
                     </a>
                 </div>
             </div>
 
-            <div class="w-1/2 md:w-1/2 flex justify-end" data-aos="zoom-in">
-                <div class="relative w-full max-w-[200px] md:max-w-full">
+            <div class="w-[45%] md:w-1/2 flex justify-end" data-aos="zoom-in">
+                <div class="relative w-full">
                     <div class="absolute -inset-2 bg-kumir-gold/20 rounded-full blur-xl opacity-50"></div>
-                    <img src="xenia-putih.jpeg" alt="Armada Kumir Trans" class="relative rounded-lg shadow-2xl w-full h-auto object-contain animate-floating">
+                    <img src="xenia-putih.jpeg" alt="Armada" class="relative rounded-lg w-full h-auto object-contain animate-floating shadow-2xl">
                 </div>
             </div>
 
@@ -122,77 +118,48 @@
     </div>
 </header>
 
-<section id="tentang" class="py-20 bg-kumir-dark text-white">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-        <div>
-            <img src="xenia-putih.jpeg" class="w-full rounded-2xl shadow-2xl border border-white/10" alt="Tentang Kumir Trans">
+<section id="tentang" class="py-12 md:py-20 bg-kumir-dark text-white">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+        <div data-aos="fade-up">
+            <img src="xenia-putih.jpeg" class="w-full rounded-2xl shadow-2xl border border-white/10" alt="Armada">
         </div>
         <div data-aos="fade-left">
-            <h2 class="text-3xl md:text-5xl font-black mb-8 uppercase">KUMIR <span class="text-kumir-gold">TRANS</span></h2>
-            <div class="space-y-5 text-gray-300 leading-relaxed text-base">
-                <p><span class="text-kumir-gold font-bold">KUMIR TRANS</span> hadir sebagai layanan travel darat terpercaya antar kota dan antar provinsi.</p>
-                <p>Prioritas kami adalah keamanan, kenyamanan, dan ketepatan waktu perjalanan Anda.</p>
-            </div>
-            <a href="https://wa.me/6289502191519" class="inline-block mt-8 bg-kumir-gold text-black px-6 py-3 rounded font-bold hover:bg-white transition">
-                Hubungi Admin
-            </a>
-        </div>
-    </div>
-</section>
-
-<section id="rute" class="py-20 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-16 uppercase">Rute Perjalanan</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white rounded-xl shadow-lg p-8 border-b-4 border-kumir-gold">
-                <h3 class="font-bold mb-4 text-center border-b pb-2">JOGJA</h3>
-                <ul class="space-y-2 text-sm text-center">
-                    <li>Jakarta PP</li><li>Bekasi PP</li><li>Tangerang PP</li><li>Bogor PP</li>
-                </ul>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-8 border-b-4 border-kumir-gold">
-                <h3 class="font-bold mb-4 text-center border-b pb-2">MAGELANG</h3>
-                <ul class="space-y-2 text-sm text-center">
-                    <li>Jakarta PP</li><li>Bogor PP</li><li>Depok PP</li><li>Tangerang PP</li>
-                </ul>
-            </div>
-            <div class="bg-white rounded-xl shadow-lg p-8 border-b-4 border-kumir-gold">
-                <h3 class="font-bold mb-4 text-center border-b pb-2">SEMARANG</h3>
-                <ul class="space-y-2 text-sm text-center">
-                    <li>Jakarta PP</li><li>Cirebon PP</li><li>Tegal PP</li><li>Pemalang PP</li>
-                </ul>
+            <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase">KUMIR <span class="text-kumir-gold">TRANS</span></h2>
+            <div class="space-y-4 text-gray-300 leading-relaxed text-sm md:text-lg">
+                <p><span class="text-kumir-gold font-bold">KUMIR TRANS</span> adalah layanan travel terpercaya yang mengutamakan kenyamanan dan ketepatan waktu.</p>
+                <p>Kami melayani perjalanan antar kota dengan sistem jemput antar sampai alamat (Door to Door).</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="kenapa" class="py-20 bg-white">
+<section id="rute" class="py-16 bg-gray-100">
     <div class="max-w-6xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-12">Kenapa Harus Kami?</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-kumir-dark text-white p-8 rounded-xl">
-                <h3 class="font-bold mb-3 uppercase text-kumir-gold">Penguasaan Rute</h3>
-                <p class="text-sm opacity-80">Driver berpengalaman memahami seluruh jalur Jawa.</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-12 uppercase">Rute Perjalanan</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-kumir-gold">
+                <h3 class="font-bold mb-2">JOGJA - JAKARTA</h3>
+                <p class="text-xs text-gray-500 italic">Pulang Pergi (PP)</p>
             </div>
-            <div class="bg-kumir-dark text-white p-8 rounded-xl">
-                <h3 class="font-bold mb-3 uppercase text-kumir-gold">Layanan Fleksibel</h3>
-                <p class="text-sm opacity-80">Door to Door service (Jemput antar sampai depan pintu).</p>
+            <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-kumir-gold">
+                <h3 class="font-bold mb-2">SEMARANG - JAKARTA</h3>
+                <p class="text-xs text-gray-500 italic">Pulang Pergi (PP)</p>
             </div>
-            <div class="bg-kumir-dark text-white p-8 rounded-xl">
-                <h3 class="font-bold mb-3 uppercase text-kumir-gold">Kenyamanan</h3>
-                <p class="text-sm opacity-80">Armada bersih, wangi, dan selalu terawat.</p>
+            <div class="bg-white p-6 rounded-xl shadow-md border-b-4 border-kumir-gold">
+                <h3 class="font-bold mb-2">BANJARNEGARA - JKT</h3>
+                <p class="text-xs text-gray-500 italic">Pulang Pergi (PP)</p>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="bg-kumir-dark text-gray-500 py-8 text-center text-[10px] uppercase tracking-widest">
+<footer class="bg-kumir-dark text-gray-600 py-6 text-center text-[10px] uppercase">
     © 2026 Kumir Trans. All rights reserved.
 </footer>
 
 <a href="https://wa.me/6289502191519" target="_blank"
-    class="fixed bottom-6 right-6 bg-[#25D366] text-white px-5 py-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-110 transition z-[100] font-bold">
-    <i class="fab fa-whatsapp text-2xl"></i> Admin
+    class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-[100]">
+    <i class="fab fa-whatsapp text-2xl"></i>
 </a>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
