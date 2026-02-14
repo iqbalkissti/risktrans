@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kumir Trans - Tour and Travel</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        /* Menggunakan palette warna yang kamu tentukan */
+        .bg-kumir-dark { background-color: #030806; }
+        .text-kumir-gold { color: #ec9034; }
+        .border-kumir-gold { border-color: #e99949; }
+        
+      .hero-gradient {
+    background: linear-gradient(rgba(3, 8, 6, 0.2), rgba(3, 8, 6, 0.6)), 
+                url('gambar/xenia-putih.jpeg'); 
+    background-size: cover;
+    /* Ini yang menurunkan gambar: 'center 80%' artinya gambar digeser ke bawah */
+    background-position: center 80%; 
+    background-repeat: no-repeat;
+    height: 100vh; 
+}
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <nav class="bg-kumir-dark text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-black tracking-tighter italic uppercase">
+                    KUMIR <span class="text-kumir-gold">TRANS</span>
+                </span>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 text-xs font-bold uppercase tracking-widest">
+                <a href="#" class="text-kumir-gold">Home</a>
+                <a href="#tentang" class="hover:text-kumir-gold transition">Tentang Kami</a>
+                <a href="#rute" class="hover:text-kumir-gold transition">Rute</a>
+                <a href="#armada" class="hover:text-kumir-gold transition">Armada</a>
+            </div>
+            
+            <a href="https://wa.me/62812345678" target="_blank" class="border border-white px-5 py-1.5 rounded-sm text-sm font-bold hover:bg-white hover:text-black transition uppercase">
+                Pesan Travel
+            </a>
+        </div>
+    </nav>
+
+  <header class="hero-gradient min-h-screen flex items-center text-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="bg-black/60 backdrop-blur-lg p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl max-w-5xl inline-block">
+                
+                <div class="mb-10">
+                    <h2 class="text-xl md:text-2xl font-medium mb-1 italic text-kumir-gold uppercase tracking-[0.3em]">
+                        Tour & Travel
+                    </h2>
+                    <h1 class="text-5xl md:text-8xl font-black mb-4 leading-none uppercase">
+                        KUMIR <br><span class="text-kumir-gold text-6xl md:text-[110px]">TRANS</span>
+                    </h1>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 border-t border-white/20 pt-10">
+                    
+                    <div class="group">
+                        <h3 class="text-kumir-gold font-bold mb-5 flex items-center gap-3 uppercase tracking-widest text-lg">
+                            <i class="fas fa-map-marked-alt text-2xl group-hover:rotate-12 transition-transform"></i> Rute Travel:
+                        </h3>
+                        <ul class="text-base md:text-lg space-y-3 opacity-95 font-semibold">
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-arrow-circle-right text-kumir-gold text-sm"></i> Jogja - Jakarta PP
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-arrow-circle-right text-kumir-gold text-sm"></i> Jogja - Bekasi PP
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-arrow-circle-right text-kumir-gold text-sm"></i> Magelang - Jakarta PP
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-arrow-circle-right text-kumir-gold text-sm"></i> Semarang - Jakarta PP
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="group border-l md:border-white/10 md:pl-10">
+                        <h3 class="text-kumir-gold font-bold mb-5 flex items-center gap-3 uppercase tracking-widest text-lg">
+                            <i class="fas fa-concierge-bell text-2xl group-hover:bounce transition-transform"></i> Layanan Kami:
+                        </h3>
+                        <ul class="text-base md:text-lg space-y-3 opacity-95 font-semibold">
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-star text-kumir-gold text-xs"></i> Carter Drop / PP
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-star text-kumir-gold text-xs"></i> Paket Wisata
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-star text-kumir-gold text-xs"></i> Kirim Paket Kilat
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i class="fas fa-star text-kumir-gold text-xs"></i> Perjalanan Dinas
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="tentang" class="py-20 bg-kumir-dark text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="md:w-1/2 relative">
+                    <div class="absolute inset-0 bg-white/5 rounded-full scale-110 blur-3xl"></div>
+                    
+                    <div class="relative z-10 p-4">
+                        <img src="gambar/xenia-putih.jpeg" 
+                             alt="Armada Kumir Trans" 
+                             class="w-full drop-shadow-[0_20px_50px_rgba(236,144,52,0.3)] transform hover:scale-105 transition duration-500">
+                        
+                        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-kumir-gold text-kumir-dark px-6 py-2 rounded-full font-bold shadow-xl italic whitespace-nowrap">
+                            Kami Melayani dengan Sepenuh Hati
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:w-1/2">
+                    <h4 class="text-kumir-gold uppercase tracking-[0.3em] font-bold mb-2">Tentang</h4>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 uppercase leading-tight">
+                        KUMIR <span class="text-kumir-gold">TRANS</span>
+                    </h2>
+                    
+                    <div class="space-y-6 text-gray-300 leading-relaxed text-justify">
+                        <p>
+                            <span class="text-kumir-gold font-bold">KUMIR TRANS</span> hadir sebagai layanan travel darat terpercaya yang melayani perjalanan antar kota dan antar provinsi di wilayah Jawa dan sekitarnya. Kami menjadi solusi transportasi bagi masyarakat yang membutuhkan perjalanan aman, nyaman, dan efisien.
+                        </p>
+                        <p>
+                            Komitmen kami adalah memberikan pelayanan perjalanan yang mengutamakan keamanan, kenyamanan, dan ketepatan waktu. Armada pilihan kami selalu dirawat secara berkala dan dikemudikan oleh driver berpengalaman yang memahami kondisi perjalanan. 
+                        </p>
+                        <p class="border-l-4 border-kumir-gold pl-4 italic bg-white/5 py-4 rounded-r-lg">
+                            "Proses pemesanan dibuat praktis melalui WhatsApp, sehingga pelanggan dapat dengan mudah mengatur perjalanan tanpa ribet."
+                        </p>
+                    </div>
+
+                    <div class="mt-10">
+                        <a href="https://wa.me/62812345678" class="inline-flex items-center gap-3 bg-kumir-gold text-kumir-dark px-8 py-3 rounded-md font-bold hover:bg-white transition-colors group">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                            HUBUNGI ADMIN KUMIR
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="rute" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-2 uppercase">Rute Perjalanan</h2>
+                <div class="h-1 w-20 bg-kumir-gold mx-auto mb-4"></div>
+                <p class="text-gray-500 font-medium">Melayani rute strategis di seluruh wilayah Jawa</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border-b-4 border-kumir-gold">
+                    <div class="bg-kumir-dark p-4 text-center">
+                        <h3 class="text-kumir-gold font-black italic tracking-widest text-xl">JOGJA</h3>
+                    </div>
+                    <ul class="p-6 space-y-3 text-gray-700 font-semibold">
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Jakarta</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Bekasi</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Tangerang</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Bogor</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Cirebon</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between"><span>Semarang</span> <span class="text-kumir-gold italic">PP</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border-b-4 border-kumir-gold">
+                    <div class="bg-kumir-dark p-4 text-center">
+                        <h3 class="text-kumir-gold font-black italic tracking-widest text-xl">MAGELANG</h3>
+                    </div>
+                    <ul class="p-6 space-y-3 text-gray-700 font-semibold">
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Jakarta</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Bogor</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Depok</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Tangerang</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Cirebon</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between"><span>Pekalongan</span> <span class="text-kumir-gold italic">PP</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-md overflow-hidden border-b-4 border-kumir-gold">
+                    <div class="bg-kumir-dark p-4 text-center">
+                        <h3 class="text-kumir-gold font-black italic tracking-widest text-xl">SEMARANG/JEPARA</h3>
+                    </div>
+                    <ul class="p-6 space-y-3 text-gray-700 font-semibold">
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Jakarta</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Cirebon</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Indramayu</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Brebes</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between border-b border-gray-100 pb-2"><span>Tegal</span> <span class="text-kumir-gold italic">PP</span></li>
+                        <li class="flex justify-between"><span>Pemalang</span> <span class="text-kumir-gold italic">PP</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="mt-12 bg-kumir-dark p-8 rounded-2xl text-center text-white shadow-xl border border-kumir-gold/20">
+                <h3 class="text-xl font-bold mb-4 uppercase tracking-wider">Apa rute tujuan anda tidak ada didaftar?</h3>
+                <p class="text-gray-400 mb-6">Hubungi admin kami untuk informasi lengkap rute perjalanan yang tersedia secara *real-time*.</p>
+                <a href="https://wa.me/62812345678" class="bg-kumir-gold text-kumir-dark px-10 py-3 rounded-full font-black hover:bg-white transition-all uppercase tracking-tighter">
+                    Tanya Rute Lain
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-2">Kenapa Harus Kami?</h2>
+                <div class="h-1 w-20 bg-kumir-gold mx-auto mb-4"></div>
+                <p class="text-sm text-gray-500 uppercase tracking-[0.2em]">KUMIR TRANS – Partner Perjalanan Terbaik</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="group bg-kumir-dark text-white p-10 rounded-2xl shadow-xl hover:-translate-y-3 transition-all duration-300 border-b-4 border-transparent hover:border-kumir-gold">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i class="fas fa-map-marked-alt text-kumir-dark text-2xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Penguasaan Rute</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed text-center">
+                        Driver berpengalaman dengan penguasaan rute perjalanan antar kota dan antar provinsi di seluruh pulau Jawa.
+                    </p>
+                </div>
+
+                <div class="group bg-kumir-dark text-white p-10 rounded-2xl shadow-xl hover:-translate-y-3 transition-all duration-300 border-b-4 border-transparent hover:border-kumir-gold">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i class="fas fa-check text-kumir-dark text-2xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Layanan Fleksibel</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed text-center">
+                        Kami mengerti kebutuhan Anda. Pengaturan rute dan titik jemput dapat disesuaikan (Door to Door service).
+                    </p>
+                </div>
+
+                <div class="group bg-kumir-dark text-white p-10 rounded-2xl shadow-xl hover:-translate-y-3 transition-all duration-300 border-b-4 border-transparent hover:border-kumir-gold">
+                    <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-8 shadow-inner">
+                        <i class="fas fa-thumbs-up text-kumir-dark text-2xl group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center">Kenyamanan Perjalanan</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed text-center">
+                        Armada terbaru yang selalu terawat dan bersih untuk memastikan kenyamanan Anda hingga sampai ke tujuan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-kumir-dark text-gray-500 py-8 border-t border-white/5 text-center text-xs uppercase tracking-widest">
+        &copy; 2026 Kumir Trans. All rights reserved. Managed by <span class="text-kumir-gold">Kibala IT</span>
+    </footer>
+
+    <a href="https://wa.me/62812345678" target="_blank" 
+       class="fixed bottom-8 right-8 bg-[#25D366] text-white px-6 py-4 rounded-full shadow-2xl flex items-center space-x-3 hover:scale-110 active:scale-95 transition-all z-[100] group">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        <div class="flex flex-col items-start leading-none">
+            <span class="text-[10px] uppercase opacity-80">Hubungi Kami</span>
+            <span class="font-bold tracking-wide text-lg">Admin Kumir</span>
+        </div>
+    </a>
+
+</body>
+</html>
