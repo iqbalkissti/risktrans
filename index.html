@@ -15,7 +15,7 @@
         .border-kumir-gold { border-color: #e99949; }
         .bg-kumir-gold { background-color: #ec9034; }
 
-        /* MENGEMBALIKAN EFEK GRADIENT */
+        /* Efek Latar Belakang agar tidak kosong */
         .hero-gradient {
             background: radial-gradient(circle at 20% 30%, rgba(236, 144, 52, 0.15) 0%, transparent 40%),
                         radial-gradient(circle at 80% 70%, rgba(236, 144, 52, 0.1) 0%, transparent 40%),
@@ -23,23 +23,22 @@
             position: relative;
         }
 
-        /* MENGEMBALIKAN ANIMASI MELAYANG */
+        /* Efek Melayang untuk Gambar Hero */
         @keyframes floating {
-            0% { transform: translateY(0px) scale(1.0); }
-            50% { transform: translateY(-10px) scale(1.02); }
-            100% { transform: translateY(0px) scale(1.0); }
+            0% { transform: translateY(0px) scale(1.1); }
+            50% { transform: translateY(-15px) scale(1.12); }
+            100% { transform: translateY(0px) scale(1.1); }
         }
         .animate-floating {
-            animation: floating 3s ease-in-out infinite;
+            animation: floating 4s ease-in-out infinite;
         }
 
-        /* Penyesuaian Jarak & Ukuran di HP */
-        @media (max-width: 640px) {
-            .hero-container { min-height: 45vh !important; padding-top: 1.5rem; padding-bottom: 1.5rem; }
-            .hero-title { font-size: 1.4rem !important; }
-            .info-box { padding: 0.5rem !important; margin-bottom: 0.5rem; }
-            .info-text { font-size: 7px !important; line-height: 1.2; }
-            .btn-pesan { padding: 0.5rem 1rem !important; font-size: 9px !important; }
+        /* Penyesuaian khusus HP agar berjejer dan rapat */
+        @media (max-width:768px){
+            .hero-section { min-height: 60vh !important; padding-top: 20px; padding-bottom: 20px; }
+            .hero-title { font-size: 1.75rem !important; }
+            .info-box-text { font-size: 8px !important; line-height: 1.2; }
+            .info-box-title { font-size: 7px !important; margin-bottom: 2px !important; }
         }
     </style>
 </head>
@@ -84,92 +83,152 @@
     </div>
 </nav>
 
-<header class="hero-container hero-gradient min-h-[50vh] md:min-h-[90vh] flex items-center overflow-hidden">
+<header class="hero-section hero-gradient min-h-[90vh] flex items-center overflow-hidden relative">
     <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
 
-    <div class="max-w-7xl mx-auto px-4 md:px-6 py-4 w-full relative z-10">
-        <div class="flex flex-row items-center justify-between gap-3 md:gap-12">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 w-full relative z-10">
+        <div class="flex flex-row items-center gap-4 md:gap-12">
             
-            <div class="w-[55%] md:w-1/2 text-white" data-aos="fade-right">
-                <h2 class="text-kumir-gold font-bold tracking-widest mb-1 text-[8px] md:text-sm uppercase">Tour & Travel</h2>
-                <h1 class="hero-title text-2xl md:text-6xl lg:text-7xl font-black uppercase mb-2 md:mb-6">
-                    KUMIR <br><span class="text-kumir-gold">TRANS</span>
+            <div class="w-[60%] md:w-1/2 text-white" data-aos="fade-right" data-aos-duration="1200">
+                <h2 class="text-kumir-gold font-bold tracking-[0.2em] md:tracking-[0.3em] mb-1 md:mb-3 text-[8px] md:text-sm uppercase">Tour & Travel</h2>
+                <h1 class="hero-title text-3xl md:text-6xl lg:text-7xl font-black uppercase leading-none mb-4 md:mb-8">
+                    KUMIR <br>
+                    <span class="text-kumir-gold">TRANS</span>
                 </h1>
                 
-                <div class="info-box p-2 md:p-6 border border-white/10 rounded-lg bg-white/5 backdrop-blur-md mb-3 md:mb-6">
-                    <h3 class="text-kumir-gold font-bold uppercase text-[7px] md:text-xs mb-1">Rute Travel:</h3>
-                    <ul class="info-text space-y-0.5 text-[8px] md:text-sm text-gray-200">
-                        <li>Semarang - Jakarta PP</li>
-                        <li>Jogja - Jakarta PP</li>
-                    </ul>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-8 p-3 md:p-8 border border-white/10 rounded-xl md:rounded-2xl bg-white/5 backdrop-blur-md">
+                    <div>
+                        <h3 class="info-box-title text-kumir-gold font-bold mb-2 md:mb-4 uppercase text-[7px] md:text-xs tracking-[0.2em]">Rute Travel:</h3>
+                        <ul class="info-box-text space-y-0.5 md:space-y-2 text-[8px] md:text-sm font-medium text-gray-200">
+                            <li>Semarang - Jakarta PP</li>
+                            <li>Jogja - Jakarta PP</li>
+                            <li>Banjarnegara - Jakarta PP</li>
+                            <li class="hidden md:block">Banjarnegara - Semarang PP</li>
+                        </ul>
+                    </div>
+                    <div class="md:border-l md:border-white/10 md:pl-8 pt-2 md:pt-0 border-t border-white/10 md:border-t-0">
+                        <h3 class="info-box-title text-kumir-gold font-bold mb-2 md:mb-4 uppercase text-[7px] md:text-xs tracking-[0.2em]">Layanan Kami:</h3>
+                        <ul class="info-box-text space-y-0.5 md:space-y-2 text-[8px] md:text-sm font-medium text-gray-200">
+                            <li>Carter Drop</li>
+                            <li>Pulang Pergi</li>
+                            <li>Paket Wisata</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="mt-2 md:mt-8">
-                    <a href="https://wa.me/6289502191519" class="btn-pesan inline-block bg-kumir-gold text-black px-4 md:px-10 py-2 md:py-4 rounded-full font-black uppercase text-[10px] md:text-sm hover:bg-white transition shadow-xl">
+                <div class="mt-4 md:mt-8">
+                    <a href="https://wa.me/6289502191519" class="inline-block bg-kumir-gold text-black px-4 md:px-10 py-2.5 md:py-4 rounded-full font-black uppercase text-[9px] md:text-sm hover:bg-white transition shadow-xl transform hover:scale-105">
                         Hubungi Admin
                     </a>
                 </div>
             </div>
 
-            <div class="w-[45%] md:w-1/2 flex justify-end" data-aos="zoom-in">
-                <div class="relative w-full">
-                    <div class="absolute -inset-2 md:-inset-4 bg-kumir-gold/20 rounded-full blur-2xl opacity-50"></div>
-                    <img src="xenia-putih.jpeg" alt="Armada" class="relative rounded-xl w-full h-auto object-contain animate-floating shadow-2xl border border-white/5">
+            <div class="w-[40%] md:w-1/2" data-aos="zoom-in" data-aos-duration="1500">
+                <div class="relative">
+                    <div class="absolute -inset-2 md:-inset-4 bg-kumir-gold/20 rounded-full blur-2xl md:blur-3xl opacity-50"></div>
+                    <img src="xenia-putih.jpeg" alt="Armada" class="relative rounded-xl md:rounded-3xl shadow-2xl w-full object-cover animate-floating">
                 </div>
             </div>
-
         </div>
     </div>
 </header>
 
-<section id="tentang" class="py-12 md:py-24 bg-kumir-dark text-white">
-    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+<section id="tentang" class="py-16 md:py-20 bg-kumir-dark text-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
         <div data-aos="fade-up">
-            <img src="xenia-putih.jpeg" class="w-full rounded-2xl shadow-2xl border border-white/10" alt="Tentang Kami">
+            <img src="xenia-putih.jpeg" class="w-full rounded-2xl shadow-2xl border border-white/10">
         </div>
         <div data-aos="fade-left">
-            <h2 class="text-3xl md:text-5xl font-black mb-6 uppercase">KUMIR <span class="text-kumir-gold">TRANS</span></h2>
-            <div class="space-y-4 text-gray-300 leading-relaxed text-sm md:text-lg">
-                <p><span class="text-kumir-gold font-bold">KUMIR TRANS</span> hadir untuk memberikan perjalanan darat yang aman dan nyaman di seluruh wilayah Jawa.</p>
-                <p>Kami menjamin ketepatan waktu dan pelayanan prima untuk setiap penumpang.</p>
+            <h2 class="text-3xl md:text-5xl font-black mb-8 uppercase">KUMIR <span class="text-kumir-gold">TRANS</span></h2>
+            <div class="space-y-5 text-gray-300 leading-relaxed text-base md:text-lg">
+                <p><span class="text-kumir-gold font-bold">KUMIR TRANS</span> hadir sebagai layanan travel darat terpercaya yang melayani perjalanan antar kota dan antar provinsi di wilayah Jawa dan sekitarnya.</p>
+                <p>Komitmen kami adalah memberikan pelayanan perjalanan yang mengutamakan keamanan, kenyamanan, dan ketepatan waktu.</p>
+                <p class="border-l-4 border-kumir-gold pl-4 italic bg-white/5 py-3 rounded-r-lg">
+                    "Proses pemesanan dibuat praktis melalui WhatsApp."
+                </p>
             </div>
+            <a href="https://wa.me/6289502191519" class="inline-block mt-8 bg-kumir-gold text-black px-6 py-3 rounded font-bold hover:bg-white transition">
+                Hubungi Admin
+            </a>
         </div>
     </div>
 </section>
 
-<section id="rute" class="py-16 bg-gray-100">
+<section id="rute" class="py-16 md:py-20 bg-gray-100 overflow-hidden">
     <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-2xl font-bold text-center mb-12 uppercase">Rute Kami</h2>
-        <div class="grid md:grid-cols-3 gap-6">
-            <div class="bg-white p-6 rounded-xl border-b-4 border-kumir-gold shadow-sm">
-                <h3 class="font-bold text-center">JOGJA - JAKARTA</h3>
+        <h2 class="text-3xl font-bold text-center mb-16 uppercase" data-aos="fade-down">Rute Perjalanan</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-lg p-8 border-b-4 border-kumir-gold" data-aos="flip-up" data-aos-delay="100">
+                <h3 class="font-bold mb-6 text-center border-b pb-2">JOGJA</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>Jakarta PP</li><li>Bekasi PP</li><li>Tangerang PP</li><li>Bogor PP</li><li>Cirebon PP</li><li>Semarang PP</li>
+                </ul>
             </div>
-            <div class="bg-white p-6 rounded-xl border-b-4 border-kumir-gold shadow-sm">
-                <h3 class="font-bold text-center">SEMARANG - JAKARTA</h3>
+            <div class="bg-white rounded-xl shadow-lg p-8 border-b-4 border-kumir-gold" data-aos="flip-up" data-aos-delay="300">
+                <h3 class="font-bold mb-6 text-center border-b pb-2">MAGELANG</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>Jakarta PP</li><li>Bogor PP</li><li>Depok PP</li><li>Tangerang PP</li><li>Cirebon PP</li><li>Pekalongan PP</li>
+                </ul>
             </div>
-            <div class="bg-white p-6 rounded-xl border-b-4 border-kumir-gold shadow-sm">
-                <h3 class="font-bold text-center">BANJARNEGARA - JKT</h3>
+            <div class="bg-white rounded-xl shadow-lg p-8 border-b-4 border-kumir-gold" data-aos="flip-up" data-aos-delay="500">
+                <h3 class="font-bold mb-6 text-center border-b pb-2">SEMARANG/JEPARA</h3>
+                <ul class="space-y-2 text-sm">
+                    <li>Jakarta PP</li><li>Cirebon PP</li><li>Indramayu PP</li><li>Brebes PP</li><li>Tegal PP</li><li>Pemalang PP</li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
-<footer class="bg-kumir-dark text-gray-600 py-8 text-center text-[10px] uppercase">
+<section id="kenapa" class="py-16 md:py-20 bg-white overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">Kenapa Harus Kami?</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-kumir-dark text-white p-8 rounded-xl text-center hover:bg-kumir-gold hover:text-black transition duration-500" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="font-bold mb-3 uppercase">Penguasaan Rute</h3>
+                <p class="text-sm opacity-80">Driver berpengalaman dan memahami seluruh jalur Jawa.</p>
+            </div>
+            <div class="bg-kumir-dark text-white p-8 rounded-xl text-center hover:bg-kumir-gold hover:text-black transition duration-500" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="font-bold mb-3 uppercase">Layanan Fleksibel</h3>
+                <p class="text-sm opacity-80">Door to Door service sesuai kebutuhan Anda.</p>
+            </div>
+            <div class="bg-kumir-dark text-white p-8 rounded-xl text-center hover:bg-kumir-gold hover:text-black transition duration-500" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="font-bold mb-3 uppercase">Kenyamanan Perjalanan</h3>
+                <p class="text-sm opacity-80">Armada bersih dan terawat demi kenyamanan.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-kumir-dark text-gray-500 py-8 text-center text-xs uppercase tracking-widest">
     © 2026 Kumir Trans. All rights reserved.
 </footer>
 
 <a href="https://wa.me/6289502191519" target="_blank"
-    class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-[100]">
-    <i class="fab fa-whatsapp text-2xl"></i>
+    class="fixed bottom-6 right-6 bg-[#25D366] text-white px-5 py-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-110 transition z-[100] font-bold">
+    <i class="fab fa-whatsapp text-2xl"></i> Admin
 </a>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-    AOS.init({ once: true, offset: 50 });
+    AOS.init({ once: false, mirror: true });
+
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
+        const icon = menuBtn.querySelector('i');
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-times');
+    });
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuBtn.querySelector('i').classList.add('fa-bars');
+            menuBtn.querySelector('i').classList.remove('fa-times');
+        });
     });
 </script>
 
