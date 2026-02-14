@@ -211,23 +211,15 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init({ once: false, mirror: true });
-
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
-
     menuBtn.addEventListener('click', () => {
         mobileMenu.classList.toggle('hidden');
-        const icon = menuBtn.querySelector('i');
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-times');
     });
-
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             mobileMenu.classList.add('hidden');
-            menuBtn.querySelector('i').classList.add('fa-bars');
-            menuBtn.querySelector('i').classList.remove('fa-times');
         });
     });
 </script>
