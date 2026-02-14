@@ -15,15 +15,22 @@
         .border-kumir-gold { border-color: #e99949; }
         
       .hero-gradient {
-    background: linear-gradient(rgba(3, 8, 6, 0.2), rgba(3, 8, 6, 0.6)), 
-                url('xenia-putih.jpeg'); 
-    background-size: cover;
-    /* Ini yang menurunkan gambar: 'center 80%' artinya gambar digeser ke bawah */
-    background-position: center 80%; 
-    background-repeat: no-repeat;
-    height: 100vh; 
-}
-    </style>
+        background: linear-gradient(rgba(3, 8, 6, 0.1), rgba(3, 8, 6, 0.4)), 
+                    url('xenia-putih.jpeg'); 
+        background-size: cover;
+        background-position: center 80%; 
+        background-repeat: no-repeat;
+        height: 100vh; 
+    }
+
+    /* TAMBAHKAN BAGIAN INI: Ini kunci efek kaca transparan */
+    .glass-box {
+        background: rgba(0, 0, 0, 0.55); /* 0.55 adalah tingkat transparansi */
+        backdrop-filter: blur(8px); /* Membuat efek buram di belakang kotak */
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+</style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-900">
 
@@ -49,12 +56,14 @@
     </nav>
 
   <header class="hero-gradient min-h-screen flex items-center text-white relative overflow-hidden">
-        <div class="container mx-auto px-6">
-            <div class="bg-black/60 backdrop-blur-lg p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl max-w-5xl inline-block">
-                
-                <div class="mb-10">
-                    <h2 class="text-xl md:text-2xl font-medium mb-1 italic text-kumir-gold uppercase tracking-[0.3em]">
-                        Tour & Travel
+    <div class="container mx-auto px-6">
+        
+        <div class="glass-box p-8 md:p-12 rounded-3xl shadow-2xl max-w-4xl relative z-10">
+            
+            <div class="mb-10">
+                <h2 class="text-xl md:text-2xl font-medium mb-1 italic text-kumir-gold uppercase tracking-[0.3em]">
+                    Tour & Travel
+                </h2>
                     </h2>
                     <h1 class="text-5xl md:text-8xl font-black mb-4 leading-none uppercase">
                         KUMIR <br><span class="text-kumir-gold text-6xl md:text-[110px]">TRANS</span>
