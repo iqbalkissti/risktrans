@@ -15,15 +15,12 @@
         .border-rizki-gold { border-color: #e99949; }
         .bg-rizki-gold { background-color: #ec9034; }
 
-        /* Efek Latar Belakang */
         .hero-gradient {
             background: radial-gradient(circle at 20% 30%, rgba(236, 144, 52, 0.15) 0%, transparent 40%),
                         radial-gradient(circle at 80% 70%, rgba(236, 144, 52, 0.1) 0%, transparent 40%),
                         #030806;
-            position: relative;
         }
 
-        /* Efek Melayang untuk Gambar Hero */
         @keyframes floating {
             0% { transform: translateY(0px) scale(1.1); }
             50% { transform: translateY(-15px) scale(1.12); }
@@ -32,21 +29,13 @@
         .animate-floating {
             animation: floating 4s ease-in-out infinite;
         }
-
-        /* Penyesuaian Mobile */
-        @media (max-width:768px){
-            .hero-section { min-height: auto !important; padding-top: 40px; padding-bottom: 40px; }
-            .hero-title { font-size: 2.25rem !important; }
-            .info-box-text { font-size: 10px !important; line-height: 1.2; }
-            .info-box-title { font-size: 9px !important; margin-bottom: 2px !important; }
-        }
     </style>
 </head>
 
 <body class="bg-gray-50 font-sans text-gray-900 overflow-x-hidden">
 
 <nav class="bg-rizki-dark text-white p-4 sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
         <span class="text-xl md:text-2xl font-black italic uppercase tracking-tighter">
             RIZKI <span class="text-rizki-gold">TRAVEL</span>
         </span>
@@ -55,7 +44,6 @@
             <a href="#" class="text-rizki-gold">Home</a>
             <a href="#armada" class="hover:text-rizki-gold transition">Pilihan Rute</a>
             <a href="#tentang" class="hover:text-rizki-gold transition">Tentang</a>
-            <a href="#kenapa" class="hover:text-rizki-gold transition">Keunggulan</a>
         </div>
 
         <div class="flex items-center gap-4">
@@ -69,44 +57,37 @@
         </div>
     </div>
 
-    <div id="mobile-menu" class="hidden bg-white text-black absolute top-full left-0 w-full shadow-2xl border-t border-gray-100">
-        <div class="flex flex-col p-6 space-y-5 font-bold uppercase text-sm">
+    <div id="mobile-menu" class="hidden bg-white text-black absolute top-full left-0 w-full shadow-2xl border-t border-gray-100 p-6">
+        <div class="flex flex-col space-y-5 font-bold uppercase text-sm">
             <a href="#" class="mobile-link text-rizki-gold">Home</a>
-            <a href="#armada" class="mobile-link hover:text-rizki-gold">Pilihan Rute</a>
-            <a href="#tentang" class="mobile-link hover:text-rizki-gold">Tentang Kami</a>
-            <hr class="border-gray-100">
-            <a href="https://wa.me/6289502191519" target="_blank" class="text-center bg-rizki-dark text-white py-3 rounded-lg text-xs">
-                <i class="fab fa-whatsapp mr-1"></i> Chat Admin
-            </a>
+            <a href="#armada" class="mobile-link">Pilihan Rute</a>
+            <a href="#tentang" class="mobile-link">Tentang Kami</a>
+            <a href="https://wa.me/6289502191519" class="text-center bg-rizki-dark text-white py-3 rounded-lg text-xs">Chat Admin</a>
         </div>
     </div>
 </nav>
 
-<header class="hero-section hero-gradient min-h-[90vh] flex items-center overflow-hidden relative">
-    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');"></div>
-
-    <div class="max-w-7xl mx-auto px-4 md:px-6 py-12 w-full relative z-10">
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            
+<header class="hero-section hero-gradient min-h-[90vh] flex items-center relative py-12">
+    <div class="max-w-7xl mx-auto px-6 w-full z-10">
+        <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="w-full md:w-1/2 text-white text-center md:text-left" data-aos="fade-right">
-                <h2 class="text-rizki-gold font-bold tracking-widest mb-2 text-xs md:text-sm uppercase">Official Tour & Travel</h2>
-                <h1 class="hero-title text-4xl md:text-7xl font-black uppercase leading-none mb-8">
-                    RIZKI <br>
-                    <span class="text-rizki-gold">TRAVEL</span>
+                <h2 class="text-rizki-gold font-bold tracking-widest mb-2 text-xs uppercase">Official Tour & Travel</h2>
+                <h1 class="text-4xl md:text-7xl font-black uppercase leading-none mb-8">
+                    RIZKI <br> <span class="text-rizki-gold">TRAVEL</span>
                 </h1>
                 
-                <div class="grid grid-cols-2 gap-4 p-5 md:p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md">
+                <div class="grid grid-cols-2 gap-4 p-5 md:p-8 border border-white/10 rounded-2xl bg-white/5 backdrop-blur-md text-left">
                     <div>
-                        <h3 class="info-box-title text-rizki-gold font-bold mb-3 uppercase text-[10px] tracking-widest">Rute Utama:</h3>
-                        <ul class="info-box-text space-y-1 text-xs md:text-sm font-medium text-gray-200">
+                        <h3 class="text-rizki-gold font-bold mb-3 uppercase text-[10px] tracking-widest">Rute Utama:</h3>
+                        <ul class="text-xs md:text-sm font-medium text-gray-200 space-y-1">
                             <li>Banjarnegara - Jakarta</li>
                             <li>Banjarnegara - Semarang</li>
                             <li>Banjarnegara - Jogja</li>
                         </ul>
                     </div>
                     <div class="border-l border-white/10 pl-5">
-                        <h3 class="info-box-title text-rizki-gold font-bold mb-3 uppercase text-[10px] tracking-widest">Layanan Kami:</h3>
-                        <ul class="info-box-text space-y-1 text-xs md:text-sm font-medium text-gray-200">
+                        <h3 class="text-rizki-gold font-bold mb-3 uppercase text-[10px] tracking-widest">Layanan Kami:</h3>
+                        <ul class="text-xs md:text-sm font-medium text-gray-200 space-y-1">
                             <li>Carter Drop</li>
                             <li>Titip Paket</li>
                             <li>Antar Jemput</li>
@@ -114,8 +95,8 @@
                     </div>
                 </div>
 
-                <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
-                    <a href="#armada" class="bg-rizki-gold text-black px-8 py-4 rounded-full font-black uppercase text-xs hover:bg-white transition shadow-xl transform hover:scale-105">
+                <div class="mt-8">
+                    <a href="#armada" class="inline-block bg-rizki-gold text-black px-8 py-4 rounded-full font-black uppercase text-xs hover:bg-white transition shadow-xl transform hover:scale-105">
                         Cek Harga
                     </a>
                 </div>
@@ -124,7 +105,7 @@
             <div class="w-full md:w-1/2" data-aos="zoom-in">
                 <div class="relative px-4">
                     <div class="absolute -inset-4 bg-rizki-gold/20 rounded-full blur-3xl opacity-50"></div>
-                    <img src="xenia-putih2.jpeg" alt="Armada Rizki Travel" class="relative rounded-2xl shadow-2xl w-full h-auto object-cover animate-floating">
+                    <img src="xenia-putih2.jpeg" alt="Armada" class="relative rounded-2xl shadow-2xl w-full h-auto animate-floating">
                 </div>
             </div>
         </div>
@@ -136,188 +117,131 @@
         <div class="text-center mb-16" data-aos="fade-up">
             <h2 class="text-3xl md:text-5xl font-black uppercase mb-4">HARGA <span class="text-rizki-gold">TIKET</span></h2>
             <div class="h-1.5 w-24 bg-rizki-gold mx-auto mb-4"></div>
-            <p class="text-gray-600 max-w-2xl mx-auto italic">Pilih layanan yang sesuai dengan kebutuhan perjalanan Anda.</p>
+            <p class="text-gray-600 italic">Pilih layanan yang sesuai dengan kebutuhan perjalanan Anda.</p>
         </div>
 
-        <div class="mb-20">
-            <div class="flex items-center gap-4 mb-10">
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-8">
                 <div class="h-1 w-12 bg-rizki-gold"></div>
                 <h3 class="text-xl font-bold uppercase tracking-widest">Tiket Reguler <span class="text-gray-400 text-sm font-normal">(Per Seat)</span></h3>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition duration-300" data-aos="fade-up">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition" data-aos="fade-up">
                     <img src="calya-silver.jpeg" alt="Jakarta" class="w-full h-52 object-cover">
                     <div class="p-6 text-center">
                         <h4 class="text-lg font-bold text-gray-800">Banjarnegara - Jakarta</h4>
                         <div class="text-2xl font-black text-gray-900 mb-6">Rp 250.000 <span class="text-xs text-gray-400">/ Seat</span></div>
-                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0A%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Layanan%20Door%20to%20Door%0A%0A%F0%9F%99%8F%20Terima%20kasih%20telah%20menggunakan%20jasa%20kami%20%F0%9F%99%8F" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
+                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition" data-aos="fade-up" data-aos-delay="100">
                     <img src="xenia-putih.jpeg" alt="Semarang" class="w-full h-52 object-cover">
                     <div class="p-6 text-center">
                         <h4 class="text-lg font-bold text-gray-800">Banjarnegara - Semarang</h4>
                         <div class="text-2xl font-black text-gray-900 mb-6">Rp 200.000 <span class="text-xs text-gray-400">/ Seat</span></div>
-                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0A%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Layanan%20Door%20to%20Door%0A%0A%F0%9F%99%8F%20Terima%20kasih%20telah%20menggunakan%20jasa%20kami%20%F0%9F%99%8F" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
+                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition" data-aos="fade-up" data-aos-delay="200">
                     <img src="xenia-putih.jpeg" alt="Jogja" class="w-full h-52 object-cover">
                     <div class="p-6 text-center">
                         <h4 class="text-lg font-bold text-gray-800">Banjarnegara - Jogja</h4>
                         <div class="text-2xl font-black text-gray-900 mb-6">Rp 200.000 <span class="text-xs text-gray-400">/ Seat</span></div>
-                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0A%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Layanan%20Door%20to%20Door%0A%0A%F0%9F%99%8F%20Terima%20kasih%20telah%20menggunakan%20jasa%20kami%20%F0%9F%99%8F" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
+                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-16">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-1 w-12 bg-rizki-gold"></div>
+                <h3 class="text-xl font-bold uppercase tracking-widest">Carter Jakarta <span class="text-gray-400 text-sm font-normal">(Private)</span></h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up">
+                    <img src="calya-silver.jpeg" class="w-full h-52 object-cover">
+                    <div class="p-6 text-center">
+                        <h4 class="text-lg font-bold">Carter Dalam Kota (Jakarta)</h4>
+                        <div class="text-2xl font-black text-gray-900 mb-6">Rp 800.000 <span class="text-xs text-gray-400">/Mobil</span></div>
+                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Carter</a>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100" data-aos="fade-up">
+                    <img src="xenia-putih.jpeg" class="w-full h-52 object-cover">
+                    <div class="p-6 text-center">
+                        <h4 class="text-lg font-bold">Carter Luar Kota (Jakarta)</h4>
+                        <div class="text-2xl font-black text-gray-900 mb-6">Rp 1.200.000 <span class="text-xs text-gray-400">/Mobil</span></div>
+                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Carter</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div>
-            <div class="flex items-center gap-4 mb-10">
+            <div class="flex items-center gap-4 mb-8">
                 <div class="h-1 w-12 bg-rizki-gold"></div>
-                <h3 class="text-xl font-bold uppercase tracking-widest">Layanan Carter JAKARTA <span class="text-gray-400 text-sm font-normal">(Private)</span></h3>
+                <h3 class="text-xl font-bold uppercase tracking-widest">Layanan Tambahan</h3>
             </div>
-<div class="mb-20">
-            <div class="flex items-center gap-4 mb-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition duration-300" data-aos="fade-up">
-                    <img src="calya-silver.jpeg" alt="Jakarta" class="w-full h-52 object-cover">
-                    <div class="p-6 text-center">
-                        <h4 class="text-lg font-bold text-gray-800">Carter dalam kota (Jakarta)</h4>
-                        <div class="text-2xl font-black text-gray-900 mb-6">Rp 800.000 <span class="text-xs text-gray-400">/Mobil</span></div>
-                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0A%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Layanan%20Door%20to%20Door%0A%0A%F0%9F%99%8F%20Terima%20kasih%20telah%20menggunakan%20jasa%20kami%20%F0%9F%99%8F" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <img src="xenia-putih.jpeg" alt="Semarang" class="w-full h-52 object-cover">
-                    <div class="p-6 text-center">
-                        <h4 class="text-lg font-bold text-gray-800">Carter luar kota (Jakarta)</h4>
-                        <div class="text-2xl font-black text-gray-900 mb-6">Rp 1.200.000 <span class="text-xs text-gray-400">/Mobil</span></div>
-                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0A%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Layanan%20Door%20to%20Door%0A%0A%F0%9F%99%8F%20Terima%20kasih%20telah%20menggunakan%20jasa%20kami%20%F0%9F%99%8F" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
-                    </div>
-                </div>
-
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 max-w-md mx-auto md:mx-0" data-aos="fade-up">
+                <img src="calya-silver.jpeg" class="w-full h-52 object-cover">
+                <div class="p-6 text-center">
+                    <h4 class="text-lg font-bold">Antar Jemput Bandara</h4>
+                    <div class="text-2xl font-black text-gray-900 mb-6">Harga Menyesuaikan</div>
+                    <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Hubungi Admin</a>
                 </div>
             </div>
-            <div class="flex items-center gap-4 mb-10">
-                <div class="h-1 w-12 bg-rizki-gold"></div>
-                <h3 class="text-xl font-bold uppercase tracking-widest">Layanan Tambahan <span class="text-gray-400 text-sm font-normal"></span></h3>
-            </div>
-<div class="mb-20">
-            <div class="flex items-center gap-4 mb-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100 hover:border-rizki-gold transition duration-300" data-aos="fade-up">
-                    <img src="calya-silver.jpeg" alt="Jakarta" class="w-full h-52 object-cover">
-                    <div class="p-6 text-center">
-                        <h4 class="text-lg font-bold text-gray-800">Antar Jemput Bandara</h4>
-                        <div class="text-2xl font-black text-gray-900 mb-6">Harga menyesuaikan <span class="text-xs text-gray-400">/Mobil</span></div>
-                        <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0A%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Layanan%20Door%20to%20Door%0A%0A%F0%9F%99%8F%20Terima%20kasih%20telah%20menggunakan%20jasa%20kami%20%F0%9F%99%8F" class="block w-full py-3 bg-rizki-dark text-white font-bold rounded-lg hover:bg-rizki-gold transition">Booking Seat</a>
-                    </div>
-                </div>
-
-        </div>
-           
         </div>
     </div>
 </section>
 
-<section id="tentang" class="py-16 md:py-20 bg-rizki-dark text-white">
-
+<section id="tentang" class="py-20 bg-rizki-dark text-white">
     <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
         <div data-aos="fade-up">
-
             <img src="calya-silver.jpeg" class="w-full rounded-2xl shadow-2xl border border-white/10">
-
         </div>
-
         <div data-aos="fade-left">
-
             <h2 class="text-3xl md:text-5xl font-black mb-8 uppercase">RIZKI <span class="text-rizki-gold">TRANS</span></h2>
-
             <div class="space-y-5 text-gray-300 leading-relaxed text-base md:text-lg">
-
-                <p><span class="text-rizki-gold font-bold">RIZKI TRANS</span> adalah mitra perjalanan darat profesional yang melayani wilayah Jawa Tengah, Jogja, hingga Jabodetabek.</p>
-
+                <p><span class="text-rizki-gold font-bold">RIZKI TRANS</span> adalah mitra perjalanan darat profesional yang melayani wilayah Jabodetabek, Jawa Tengah, Jawa Barat, Jawa Timur,Jogja, hingga Bali.</p>
                 <p>Kami hadir untuk memastikan perjalanan Anda tidak hanya sampai tujuan, tapi juga berkesan dengan kenyamanan armada kelas satu.</p>
-
                 <p class="border-l-4 border-rizki-gold pl-4 italic bg-white/5 py-3 rounded-r-lg">
-
                     "Keamanan Anda adalah prioritas kami, kenyamanan Anda adalah standar kami."
-
                 </p>
-
-         </div>
-            <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" target="_blank" class="inline-block mt-8 bg-rizki-gold text-black px-6 py-3 rounded font-bold hover:bg-white transition">
+            </div>
+            <a href="https://wa.me/6289502191519" target="_blank" class="inline-block mt-8 bg-rizki-gold text-black px-6 py-3 rounded font-bold hover:bg-white transition">
                 Konsultasi Rute Gratis
             </a>
         </div>
-            </a>
-
-        </div>
-
     </div>
-
 </section>
 
-
-
-
-
-
-
 <a href="https://wa.me/6289502191519?text=%F0%9F%99%8F%E2%9C%A8%20INFO%20PNP%20RIZKI%20TRAVEL%20%E2%9C%A8%F0%9F%99%8F%0ASilakan%20isi%20form%20pemesanan%20travel%20berikut%20ini%20ya%20%F0%9F%99%8F%0A%0A%F0%9F%A7%BE%20DATA%20PENUMPANG%0A%F0%9F%94%B9%20Nama%20Lengkap%20%3A%0A%F0%9F%94%B9%20Alamat%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Alamat%20Tujuan%20%3A%0A%F0%9F%94%B9%20Tanggal%20%26%20Jam%20Penjemputan%20%3A%0A%F0%9F%94%B9%20Jumlah%20Penumpang%20%3A%0A%F0%9F%94%B9%20Nama%20Pemesan%20%3A%0A%F0%9F%94%B9%20Nama%20Penumpang%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Pemesan%20%3A%0A%F0%9F%94%B9%20No.%20HP%20Penumpang%20%3A%0A%F0%9F%94%B9%20Barang%20yang%20Dibawa%20%3A%0A%0A%F0%9F%93%B7%20(Mohon%20kirim%20foto%2Fvideo%20jika%20barang%20besar)%0A%0A%F0%9F%92%B3%20Pembayaran%20via%20Transfer%0A%F0%9F%8F%A6%20Bank%20Mandiri%0A%F0%9F%91%A4%20A%2FN%20%3A%20MOHAMMAD%20RIZKI%20HIDAYATULOH%0A%F0%9F%94%A2%20No.%20Rek%20%3A%201570011858876%0A%0A%E2%9A%A0%EF%B8%8F%20Jika%20driver%20meminta%20biaya%20tambahan%20di%20luar%20kesepakatan%2C%20mohon%20segera%20hubungi%20admin.%0A%0A%F0%9F%99%8F%20Terima%20kasih%2C%20Semoga%20perjalanan%20Anda%20nyaman%20%26%20menyenangkan%20%E2%9C%A8" target="_blank"
-
     class="fixed bottom-6 right-6 bg-[#25D366] text-white px-5 py-4 rounded-full shadow-2xl flex items-center gap-2 hover:scale-110 transition z-[100] font-bold">
-
     <i class="fab fa-whatsapp text-2xl"></i> <span class="hidden md:block text-xs">Admin RIZKI</span>
-
 </a>
 
-
-
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script>
-
-    AOS.init({ once: false, mirror: true, duration: 1000 });
-
+    AOS.init({ once: true, duration: 1000 });
    
-
     const menuBtn = document.getElementById('menu-btn');
-
     const mobileMenu = document.getElementById('mobile-menu');
-
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
    
-
     menuBtn.addEventListener('click', () => {
-
         mobileMenu.classList.toggle('hidden');
-
     });
-
    
-
-    mobileLinks.forEach(link => {
-
+    document.querySelectorAll('.mobile-link').forEach(link => {
         link.addEventListener('click', () => {
-
             mobileMenu.classList.add('hidden');
-
         });
-
     });
-
 </script>
 
-
-
 </body>
-
 </html>
